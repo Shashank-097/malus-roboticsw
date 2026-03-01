@@ -1,187 +1,219 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+import { useRef } from "react";
 
+/* ================= DATA ================= */
 const services = [
   {
-    title: "Industrial Robotics",
-    description:
-      "Design and integration of industrial robotic cells engineered for accuracy, repeatability, and continuous operation in manufacturing environments.",
-    image: "/images/robotics.jpg",
-    metrics: [
-      { label: "Designed for Uptime", value: "24/7 Operation" },
-      { label: "Focus Area", value: "Precision Automation" },
-    ],
-    tags: [
-      "6-Axis Robot Cells",
-      "End-of-Arm Tooling",
-      "Vision-Guided Systems",
-      "Safety-Compliant Design",
-    ],
-  },
-  {
-    title: "PLC & SCADA Systems",
-    description:
-      "Robust PLC programming and SCADA system architectures for real-time control, monitoring, and industrial data visibility.",
+    title: "PLC Programming – Intelligent Control for Industrial Automation",
+    slug: "plc-programming",
     image: "/images/plc.jpg",
-    metrics: [
-      { label: "Control Standard", value: "IEC 61131-3" },
-      { label: "System Type", value: "Industrial Control" },
-    ],
-    tags: [
-      "PLC Logic Development",
-      "SCADA Visualization",
-      "Alarm & Event Handling",
-      "Industrial Networking",
-    ],
+    industries: ["Automotive", "FMCG", "Pharma", "Heavy Engineering"],
   },
   {
-    title: "Digital Twin Simulation",
-    description:
-      "Virtual system modeling to validate automation logic, workflows, and layouts before physical deployment.",
-    image: "/images/digital1-twin.jpg",
-    metrics: [
-      { label: "Purpose", value: "Risk Reduction" },
-      { label: "Application", value: "Virtual Commissioning" },
-    ],
-    tags: [
-      "Process Simulation",
-      "Virtual PLC Logic",
-      "System Validation",
-      "Performance Analysis",
-    ],
+    title: "Motion Control Engineering & Servo Systems",
+    slug: "motion-control",
+    image: "/images/motion-control.jpg",
+    industries: ["Automotive", "Electronics", "Packaging"],
   },
   {
-    title: "System Integration",
-    description:
-      "End-to-end automation integration covering system design, electrical coordination, commissioning, and support.",
-    image: "/images/integration.jpg",
-    metrics: [
-      { label: "Delivery Model", value: "Project-Based" },
-      { label: "Compliance Focus", value: "Industrial Safety" },
-    ],
-    tags: [
-      "Automation Architecture",
-      "Electrical Integration",
-      "On-Site Commissioning",
-      "Lifecycle Support",
-    ],
+    title: "Automated Quality Control",
+    slug: "quality-control",
+    image: "/images/quality-control.jpg",
+    industries: ["Pharma", "Electronics", "Food Processing"],
+  },
+  {
+    title: "Real-Time Monitoring & Control",
+    slug: "real-time-monitoring",
+    image: "/images/scada.jpg",
+    industries: ["Manufacturing", "Energy", "Process Plants"],
+  },
+  {
+    title: "Smart Automation & Flexibility",
+    slug: "smart-automation",
+    image: "/images/smart-automation.jpg",
+    industries: ["Warehousing", "Logistics", "FMCG"],
+  },
+  {
+    title: "Smart Factory Solutions",
+    slug: "smart-factory",
+    image: "/images/smart-factory.jpg",
+    industries: ["Automotive", "Electronics", "Industry 4.0"],
   },
 ];
 
+/* ================= ANIMATION ================= */
+const container = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.14 } },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0 },
+};
+
 export default function ServicesSection() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  /* ================= PARALLAX ================= */
+  const sheetFar = useTransform(scrollYProgress, [0, 1], [-40, 40]);
+  const sheetMid = useTransform(scrollYProgress, [0, 1], [-20, 20]);
+  const gridMove = useTransform(scrollYProgress, [0, 1], [0, -30]);
+  const glowLeft = useTransform(scrollYProgress, [0, 1], [-60, 60]);
+  const glowRight = useTransform(scrollYProgress, [0, 1], [60, -60]);
+
   return (
-    <section className="relative py-44 bg-[var(--light-bg)] text-[var(--text-dark)]">
-      <div className="max-w-7xl mx-auto px-6">
+    <section
+      ref={sectionRef}
+      className="relative bg-[#f7f9fc] py-32 overflow-hidden"
+    >
+      {/* ================= BACKGROUND LAYERS ================= */}
+      <motion.div
+        style={{ y: sheetFar }}
+        className="absolute inset-0 bg-gradient-to-b from-white via-[#f7f9fc] to-white"
+      />
+      <motion.div
+        style={{ y: sheetMid }}
+        className="absolute -top-32 left-1/2 -translate-x-1/2 w-[120%] h-[420px]
+                   bg-white/70 rotate-1
+                   shadow-[0_30px_80px_rgba(0,0,0,0.04)]"
+      />
+      <motion.div
+        style={{ y: sheetFar }}
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[380px]
+                   bg-white/60 -rotate-1
+                   shadow-[0_20px_60px_rgba(0,0,0,0.03)]"
+      />
+      <motion.div
+        style={{ y: gridMove }}
+        className="
+          absolute inset-0
+          bg-[linear-gradient(to_right,rgba(0,0,0,0.03)_1px,transparent_1px),
+              linear-gradient(to_bottom,rgba(0,0,0,0.03)_1px,transparent_1px)]
+          bg-[size:120px_120px]
+          opacity-40
+        "
+      />
+      <motion.div
+        style={{ y: glowLeft }}
+        className="absolute -top-40 -left-40 w-[520px] h-[520px]
+                   bg-cyan-300/20 blur-[180px]"
+      />
+      <motion.div
+        style={{ y: glowRight }}
+        className="absolute bottom-0 -right-40 w-[520px] h-[520px]
+                   bg-blue-300/20 blur-[180px]"
+      />
+
+      {/* ================= CONTENT ================= */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
 
         {/* HEADER */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="max-w-4xl mb-36"
+          className="max-w-3xl mb-20"
         >
-          <span className="text-xs uppercase tracking-[0.3em] text-[var(--accent)]">
-            Industrial Automation Services
+          <span className="text-xs tracking-[0.3em] text-cyan-600 uppercase">
+            Our Services
           </span>
 
-          <h2 className="mt-6 text-5xl md:text-6xl font-bold leading-tight">
-            Engineered for
+          <h2 className="mt-5 text-4xl sm:text-5xl font-semibold text-slate-900 leading-tight">
+            Automation Services
             <br />
-            Industrial Reliability
+            <span className="text-slate-500">
+              Designed for Modern Industry
+            </span>
           </h2>
 
-          <p className="mt-8 text-lg text-[var(--muted)] max-w-3xl">
-            We build automation systems with a focus on reliability, clarity,
-            and long-term operational performance — designed to scale as your
-            production grows.
+          <p className="mt-6 text-lg text-slate-600">
+            Industry-focused automation solutions engineered for performance,
+            reliability, and long-term scalability.
           </p>
         </motion.div>
 
-        {/* SERVICES */}
-        <div className="space-y-44">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9 }}
-              viewport={{ once: true }}
-              className="grid md:grid-cols-2 gap-24 items-center"
+        {/* GRID */}
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12"
+        >
+          {services.map((service, i) => (
+            <motion.article
+              key={i}
+              variants={item}
+              className="relative group h-[420px]"
             >
-              {/* IMAGE */}
-              <div className="relative rounded-3xl overflow-hidden shadow-[0_50px_140px_rgba(0,0,0,0.18)]">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  width={820}
-                  height={620}
-                  className="rounded-3xl"
-                />
-                <div className="absolute inset-0 bg-black/30" />
-              </div>
+              <Link
+                href={`/services/${service.slug}`}
+                className="absolute inset-0 z-20 rounded-3xl focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
+                aria-label={`View details for ${service.title}`}
+              />
 
-              {/* CONTENT */}
-              <div>
-                <div className="mb-6 w-20 h-[3px] bg-[var(--accent)]" />
+              {/* BACK LAYER */}
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-cyan-100/60 to-blue-100/60 translate-x-3 translate-y-3 transition-transform duration-500 group-hover:translate-x-4 group-hover:translate-y-4" />
 
-                <h3 className="text-3xl md:text-4xl font-semibold">
-                  {service.title}
-                </h3>
+              {/* MID LAYER */}
+              <div className="absolute inset-0 rounded-3xl bg-white shadow-[0_20px_50px_rgba(0,0,0,0.06)] translate-x-1.5 translate-y-1.5 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2" />
 
-                <p className="mt-6 text-lg text-[var(--muted)] leading-relaxed max-w-xl">
-                  {service.description}
-                </p>
+              {/* FRONT CARD */}
+              <motion.div
+                whileHover={{ y: -10 }}
+                transition={{ type: "spring", stiffness: 120, damping: 18 }}
+                className="relative h-full rounded-3xl overflow-hidden bg-white border border-slate-100 shadow-[0_25px_60px_rgba(0,0,0,0.1)] flex flex-col pointer-events-none"
+              >
+                {/* IMAGE */}
+                <div className="relative h-56 shrink-0 overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                </div>
 
-                {/* METRICS */}
-                <div className="mt-10 grid grid-cols-2 gap-6">
-                  {service.metrics.map((metric, i) => (
-                    <div
-                      key={i}
-                      className="border-l-2 border-[var(--accent)] pl-4"
-                    >
-                      <div className="text-lg font-semibold">
-                        {metric.value}
-                      </div>
-                      <div className="text-sm text-[var(--muted)]">
-                        {metric.label}
-                      </div>
+                {/* CONTENT */}
+                <div className="flex flex-col justify-between flex-1 p-6">
+                  <div>
+                    <h3 className="text-base sm:text-lg font-semibold text-slate-900 leading-snug group-hover:text-cyan-600 transition-colors">
+                      {service.title}
+                    </h3>
+
+                    {/* TAGS */}
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {service.industries.map((industry, idx) => (
+                        <span
+                          key={idx}
+                          className="text-[11px] font-medium px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 border border-cyan-100"
+                        >
+                          {industry}
+                        </span>
+                      ))}
                     </div>
-                  ))}
-                </div>
+                  </div>
 
-                {/* TAGS */}
-                <div className="mt-10 flex flex-wrap gap-3">
-                  {service.tags.map((tag, i) => (
-                    <span
-                      key={i}
-                      className="px-4 py-2 text-xs font-medium rounded-full bg-black/5 text-black/70"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                  {/* ACCENT LINE */}
+                  <div className="mt-6 h-[2px] w-12 bg-gradient-to-r from-cyan-500 to-blue-500" />
                 </div>
-
-                {/* CTA */}
-                <div className="mt-12 text-sm font-semibold tracking-wide text-[var(--accent)]">
-                  Discuss Technical Scope →
-                </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </motion.article>
           ))}
-        </div>
+        </motion.div>
 
-        {/* ENTERPRISE CTA */}
-        <div className="mt-56 border-t pt-20 text-center">
-          <p className="text-sm uppercase tracking-widest text-[var(--muted)]">
-            Built to Scale With You
-          </p>
-          <h3 className="mt-6 text-3xl md:text-4xl font-bold">
-            Let’s Design Your Automation Roadmap
-          </h3>
-        </div>
       </div>
     </section>
   );

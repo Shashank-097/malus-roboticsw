@@ -1,148 +1,208 @@
 "use client";
 
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useReducedMotion,
+} from "framer-motion";
 import Image from "next/image";
-import { JSX, useEffect } from "react";
+import { useRef } from "react";
 
-/* ---------------- COUNTER HOOK ---------------- */
-function AnimatedCounter({ value }: { value: number }) {
-  const count = useMotionValue(0);
-  const rounded = useTransform(count, Math.round);
+export default function AboutMaluceRobotics() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const reduceMotion = useReducedMotion();
 
-  useEffect(() => {
-    const controls = animate(count, value, {
-      duration: 2.2,
-      ease: "easeOut",
-    });
-    return controls.stop;
-  }, [value, count]);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
 
-  return <motion.span>{rounded}</motion.span>;
-}
+  /* ================= SCROLL MAPPINGS ================= */
+  const titleY = useTransform(scrollYProgress, [0, 0.25], [80, 0]);
+  const titleOpacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
 
-export default function AboutSection(): JSX.Element {
+  const card1Y = useTransform(scrollYProgress, [0, 1], [60, -40]);
+  const card2Y = useTransform(scrollYProgress, [0, 1], [0, -60]);
+  const card3Y = useTransform(scrollYProgress, [0, 1], [100, -20]);
+
+  const glowOpacity = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
+
+  const words = ["Industrial", "Automation", "Engineering"];
+
   return (
-    <section className="relative py-32 bg-[var(--light-bg)] overflow-hidden">
-
-      {/* Ambient Background Blobs */}
-      <div className="absolute -left-40 top-32 w-[30rem] h-[30rem] bg-[var(--accent)] opacity-10 blur-[120px] rounded-full" />
-      <div className="absolute right-0 bottom-0 w-[24rem] h-[24rem] bg-cyan-400 opacity-5 blur-[100px] rounded-full" />
-
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center relative z-10">
-
-        {/* ================= LEFT ================= */}
+    <section
+      ref={sectionRef}
+      className="relative bg-slate-950 text-white overflow-hidden
+                 py-32 sm:py-40 lg:py-48"
+    >
+      {/* ================= AMBIENT GRID + GLOW ================= */}
+      {!reduceMotion && (
         <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: "easeOut" }}
-          viewport={{ once: true }}
+          style={{ opacity: glowOpacity }}
+          className="absolute inset-0 pointer-events-none"
         >
-          <span className="text-sm font-semibold tracking-widest text-[var(--accent)] uppercase">
-            Who We Are
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:80px_80px]" />
+          <div className="absolute -top-40 -left-40 w-[600px] sm:w-[800px] h-[600px] sm:h-[800px] bg-cyan-500/10 blur-[200px] rounded-full" />
+          <div className="absolute bottom-0 right-0 w-[500px] sm:w-[700px] h-[500px] sm:h-[700px] bg-indigo-500/10 blur-[220px] rounded-full" />
+        </motion.div>
+      )}
+
+      <div
+        className="relative z-10 max-w-7xl mx-auto
+                   px-6 sm:px-8
+                   grid grid-cols-1 lg:grid-cols-2
+                   gap-20 lg:gap-32
+                   items-center"
+      >
+        {/* ================= LEFT: KINETIC TEXT ================= */}
+        <motion.div
+          style={reduceMotion ? {} : { opacity: titleOpacity, y: titleY }}
+        >
+          <span className="text-xs tracking-[0.45em] text-cyan-400">
+            ABOUT US
           </span>
 
-          <h2 className="mt-4 text-4xl md:text-5xl font-bold text-[var(--dark-bg)] leading-tight">
-            Precision Engineering.
-            <br />
-            Intelligent Automation.
+          {/* MAIN HEADING (DESCENDER SAFE) */}
+          <h2 className="mt-6 text-4xl sm:text-5xl md:text-6xl
+                         font-semibold leading-[1.15] pb-1">
+            Maluce Robotics
           </h2>
 
-          <p className="mt-6 text-lg text-[var(--muted)] leading-relaxed max-w-xl">
-            Malus Robotics delivers advanced industrial automation solutions —
-            from robotics integration and PLC–SCADA systems to digital twins and
-            virtual commissioning — enabling factories to operate smarter,
-            faster, and with minimal downtime.
-          </p>
-
-          {/* Feature Bullets */}
-          <div className="mt-10 space-y-5">
-            {[
-              "End-to-End System Integration & Commissioning",
-              "Robotics Simulation & Digital Twin Deployment",
-              "Global Engineering Support & Production Optimization",
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.15 }}
+          {/* ROLE WORDS (DESCENDER SAFE FIX APPLIED) */}
+          <div
+            className="mt-4 flex flex-wrap gap-x-4
+                       text-3xl sm:text-4xl md:text-5xl
+                       font-semibold
+                       leading-[1.2]
+                       pb-2"
+          >
+            {words.map((word, i) => (
+              <motion.span
+                key={word}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.25 + i * 0.15,
+                  duration: 0.5,
+                  ease: "easeOut",
+                }}
                 viewport={{ once: true }}
-                className="flex items-start gap-4"
+                className="bg-gradient-to-r from-cyan-400 via-sky-400 to-indigo-400
+                           bg-clip-text text-transparent"
               >
-                <span className="mt-2 w-2.5 h-2.5 rounded-full bg-[var(--accent)] shadow-[0_0_10px_var(--accent)]" />
-                <p className="text-[var(--muted)]">{item}</p>
-              </motion.div>
+                {word}
+              </motion.span>
             ))}
+
+            {/* TERMINAL CURSOR */}
+            <motion.span
+              animate={{ opacity: [1, 0, 1] }}
+              transition={{ duration: 1.2, repeat: Infinity }}
+              className="text-cyan-400"
+            >
+              ▍
+            </motion.span>
           </div>
 
-          {/* Stats + Progress */}
-          <div className="mt-14 grid grid-cols-3 gap-8">
-            {[
-              { label: "Projects", value: 50 },
-              { label: "Engineers", value: 10 },
-              { label: "Countries", value: 3 },
-            ].map((stat, i) => (
-              <div key={i}>
-                <h3 className="text-4xl font-bold text-[var(--accent)]">
-                  <AnimatedCounter value={stat.value} />+
-                </h3>
-                <p className="text-sm text-[var(--muted)] mt-1">{stat.label}</p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.9, duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mt-8 sm:mt-10 text-base sm:text-lg
+                       text-slate-300 max-w-xl leading-relaxed"
+          >
+            We design, program, and commission
+            <span className="text-white font-medium">
+              {" "}PLC-controlled automation, robotic cells,
+            </span>{" "}
+            and digitally validated production systems for modern industry.
+          </motion.p>
 
-                {/* Progress Bar */}
-                <motion.div
-                  initial={{ width: 0 }}
-                  whileInView={{ width: "100%" }}
-                  transition={{ duration: 1.5, delay: 0.3 }}
-                  viewport={{ once: true }}
-                  className="mt-3 h-[3px] bg-gradient-to-r from-[var(--accent)] to-cyan-400 rounded-full"
-                />
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* ================= RIGHT ================= */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.85 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9 }}
-          viewport={{ once: true }}
-          className="relative"
-        >
-          {/* Image Glow */}
-          <div className="absolute -top-12 -right-12 w-64 h-64 bg-[var(--accent)] opacity-10 blur-[90px] rounded-full" />
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 1.15, duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mt-4 text-base sm:text-lg
+                       text-slate-300 max-w-xl leading-relaxed"
+          >
+            Our systems are engineered for
+            <span className="text-white font-medium">
+              {" "}uptime, precision, and long-term scalability
+            </span>{" "}
+            — not demos.
+          </motion.p>
 
           <motion.div
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.4 }}
-          >
-            <Image
-              src="/images/factory.jpg"
-              alt="Industrial Automation"
-              width={700}
-              height={520}
-              className="rounded-2xl shadow-2xl"
-            />
-          </motion.div>
-
-          {/* Floating Glass Card */}
-          <motion.div
-            animate={{ y: [0, -18, 0] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -bottom-12 -left-12 hidden md:block
-                       backdrop-blur-xl bg-white/80 border border-white/40
-                       p-6 rounded-xl shadow-xl max-w-xs"
-          >
-            <p className="text-sm font-semibold text-[var(--accent)]">
-              Industry 4.0 Ready
-            </p>
-            <p className="mt-1 text-sm text-[var(--muted)]">
-              Intelligent, data-driven automation engineered for modern
-              manufacturing ecosystems.
-            </p>
-          </motion.div>
+            initial={{ width: 0 }}
+            whileInView={{ width: "12rem" }}
+            transition={{ delay: 1.4, duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="mt-10 sm:mt-12 h-[2px]
+                       bg-gradient-to-r from-cyan-400 to-transparent"
+          />
         </motion.div>
 
+        {/* ================= RIGHT: FLOATING GLASS CARDS ================= */}
+        <div className="relative h-[420px] sm:h-[480px] lg:h-[520px]">
+
+          <motion.div
+            style={reduceMotion ? {} : { y: card1Y }}
+            whileHover={reduceMotion ? {} : { y: -12, scale: 1.02 }}
+            transition={{ type: "spring", stiffness: 120, damping: 16 }}
+            className="absolute top-0 left-0 w-[80%] sm:w-[70%]
+                       h-[200px] sm:h-[220px]
+                       rounded-2xl overflow-hidden
+                       bg-white/10 backdrop-blur-xl
+                       border border-white/20
+                       shadow-[0_40px_80px_rgba(0,0,0,0.4)]"
+          >
+            <Image src="/images/plc.jpg" alt="PLC Automation" fill className="object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-l from-black/55 to-transparent" />
+            <span className="absolute bottom-4 left-4 text-xs sm:text-sm tracking-widest">
+              PLC & SCADA
+            </span>
+          </motion.div>
+
+          <motion.div
+            style={reduceMotion ? {} : { y: card2Y }}
+            whileHover={reduceMotion ? {} : { y: -12, scale: 1.02 }}
+            transition={{ type: "spring", stiffness: 120, damping: 16 }}
+            className="absolute top-28 sm:top-36 right-0 w-[85%] sm:w-[75%]
+                       h-[220px] sm:h-[240px]
+                       rounded-2xl overflow-hidden
+                       bg-white/10 backdrop-blur-xl
+                       border border-white/20
+                       shadow-[0_50px_100px_rgba(0,0,0,0.45)]"
+          >
+            <Image src="/images/digital1-twin.jpg" alt="Digital Twin" fill className="object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-l from-black/60 to-transparent" />
+            <span className="absolute bottom-4 left-4 text-xs sm:text-sm tracking-widest">
+              DIGITAL TWIN
+            </span>
+          </motion.div>
+
+          <motion.div
+            style={reduceMotion ? {} : { y: card3Y }}
+            whileHover={reduceMotion ? {} : { y: -12, scale: 1.02 }}
+            transition={{ type: "spring", stiffness: 120, damping: 16 }}
+            className="absolute bottom-0 left-12 sm:left-20 w-[75%] sm:w-[65%]
+                       h-[180px] sm:h-[200px]
+                       rounded-2xl overflow-hidden
+                       bg-white/10 backdrop-blur-xl
+                       border border-white/20
+                       shadow-[0_40px_90px_rgba(0,0,0,0.4)]"
+          >
+            <Image src="/images/robotics.jpg" alt="Robotics Integration" fill className="object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-l from-black/55 to-transparent" />
+            <span className="absolute bottom-4 left-4 text-xs sm:text-sm tracking-widest">
+              ROBOTICS INTEGRATION
+            </span>
+          </motion.div>
+
+        </div>
       </div>
     </section>
   );

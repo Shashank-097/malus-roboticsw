@@ -65,3 +65,34 @@ html {
   --text-dark: #0F172A;
   --muted: #6B7280;
 }
+
+:root {
+  /* Brand */
+  --accent: #5B8770;
+  --accent-soft: rgba(91, 135, 112, 0.15);
+
+  /* Industrial Metals */
+  --metal-dark: #4B3A3B;
+  --metal-mid: #9AA2A2;
+  --metal-light: #C6CCCC;
+
+  /* Base */
+  --bg-main: #0A0C0B;
+  --bg-soft: #111413;
+  --surface: #F1EEE8;
+  --text-main: #E6EAE8;
+  --text-muted: #9AA2A2;
+}
+
+/* ===== LIGHT MODE (ENGINEERING GRADE) ===== */
+:root {
+  --bg-primary: #F8FAFC;      /* off-white */
+  --bg-secondary: #F1F5F9;    /* surface */
+  --text-primary: #0F172A;   /* graphite */
+  --text-secondary: #475569; /* muted text */
+  --border-subtle: rgba(15, 23, 42, 0.08);
+
+  --cyan-main: #06B6D4;
+  --cyan-soft: #67E8F9;
+  --steel-main: #94A3B8;
+}

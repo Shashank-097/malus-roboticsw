@@ -1,98 +1,149 @@
+
 @import "tailwindcss";
 
+/* =========================================
+   MALUS ROBOTICS DESIGN SYSTEM
+========================================= */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+  /* Core Background */
+
+  --bg-main: #0a0f1c;
+  --bg-soft: #111827;
+  --surface: #1f2937;
+
+  /* Text */
+
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+
+  /* Accent */
+
+  --accent: #06b6d4;
+  --accent-soft: rgba(6, 182, 212, 0.15);
+
+  /* Steel tones */
+
+  --steel-dark: #1e293b;
+  --steel-mid: #334155;
+  --steel-light: #64748b;
+
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* =========================================
+   LIGHT MODE SUPPORT
+========================================= */
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
+
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+    --bg-main: #f8fafc;
+    --bg-soft: #f1f5f9;
+    --surface: #ffffff;
+
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+
   }
+
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-@import "tailwindcss";
+/* =========================================
+   BASE STYLES
+========================================= */
 
-/* ===============================
-   MALUS ROBOTICS THEME
-================================= */
-
-:root {
-  --primary: #0B1F3A;
-  --accent: #00B3FF;
-  --steel: #1E293B;
-  --light-gray: #F1F5F9;
-}
-
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-
-:root {
-  --metal-dark: #1C1F24;
-  --metal-mid: #2A2E35;
-  --metal-light: #3A3F47;
-  --steel: #6B7280;
-  --accent: #00A3FF; /* electric blue */
-  --text-light: #E5E7EB;
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  min-height: 100vh;
 }
 
-:root {
-  --metal-dark: #1B1E23;
-  --metal-mid: #2A2F36;
-  --metal-light: #3A3F47;
+/* =========================================
+   GLASS UI
+========================================= */
 
-  --light-bg: #F5F7FA;
-  --light-card: #FFFFFF;
-
-  --accent: #00A3FF;
-  --text-light: #E5E7EB;
-  --text-dark: #0F172A;
-  --muted: #6B7280;
+.glass {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
-:root {
-  /* Brand */
-  --accent: #5B8770;
-  --accent-soft: rgba(91, 135, 112, 0.15);
+/* =========================================
+   CYAN GLOW
+========================================= */
 
-  /* Industrial Metals */
-  --metal-dark: #4B3A3B;
-  --metal-mid: #9AA2A2;
-  --metal-light: #C6CCCC;
-
-  /* Base */
-  --bg-main: #0A0C0B;
-  --bg-soft: #111413;
-  --surface: #F1EEE8;
-  --text-main: #E6EAE8;
-  --text-muted: #9AA2A2;
+.glow-cyan {
+  box-shadow:
+  0 0 40px rgba(6,182,212,0.25),
+  0 0 80px rgba(6,182,212,0.08);
 }
 
-/* ===== LIGHT MODE (ENGINEERING GRADE) ===== */
-:root {
-  --bg-primary: #F8FAFC;      /* off-white */
-  --bg-secondary: #F1F5F9;    /* surface */
-  --text-primary: #0F172A;   /* graphite */
-  --text-secondary: #475569; /* muted text */
-  --border-subtle: rgba(15, 23, 42, 0.08);
+/* =========================================
+   TECH GRID (BLUEPRINT BACKGROUND)
+========================================= */
 
-  --cyan-main: #06B6D4;
-  --cyan-soft: #67E8F9;
-  --steel-main: #94A3B8;
+.tech-grid {
+
+  position: relative;
+
+  background-image:
+  linear-gradient(to right, rgba(6,182,212,0.15) 1px, transparent 1px),
+  linear-gradient(to bottom, rgba(6,182,212,0.15) 1px, transparent 1px);
+
+  background-size: 90px 90px;
+
+}
+
+/* =========================================
+   BLUEPRINT CIRCUIT LAYER
+========================================= */
+
+.blueprint-circuit {
+
+  background-image:
+  radial-gradient(circle at 20% 20%, rgba(6,182,212,0.08), transparent 40%),
+  radial-gradient(circle at 80% 60%, rgba(6,182,212,0.08), transparent 40%);
+
+}
+
+/* =========================================
+   SUBTLE SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148,163,184,0.4);
+  border-radius: 10px;
+}
+
+/* =========================================
+   SELECTION COLOR
+========================================= */
+
+::selection {
+  background: rgba(6,182,212,0.3);
+  color: white;
+}
+
+/* =========================================
+   IMAGE RENDERING
+========================================= */
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
 }

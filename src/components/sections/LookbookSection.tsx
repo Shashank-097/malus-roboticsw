@@ -25,7 +25,7 @@ export default function LookbookSection() {
 
   const fadeUp = {
     hidden: { opacity: 0, y: 50 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } },
+    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1]  as [number, number, number, number]} },
   };
 
   const cards = [
@@ -50,7 +50,6 @@ export default function LookbookSection() {
     >
       {/* ANIMATED GRID */}
       <motion.div
-        style={{ y: gridY }}
         aria-hidden
         className="absolute inset-0 opacity-[0.06]"
         animate={reduceMotion ? {} : { backgroundPosition: ["0px 0px", "80px 80px"] }}

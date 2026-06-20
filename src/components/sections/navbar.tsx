@@ -75,7 +75,7 @@ export default function Navbar({ logoRef }: NavbarProps) {
                   scrolled ? "wordmark-shimmer--dark" : "wordmark-shimmer--light"
                 }`}
               >
-                MALÜS
+                MALUS
               </span>
               <span className="font-light tracking-[0.34em] text-[0.65rem] md:text-xs uppercase text-cyan-600">
                 Robotics
@@ -176,7 +176,7 @@ export default function Navbar({ logoRef }: NavbarProps) {
             {/* Mobile Language Switcher */}
             <LanguageSwitcher />
 
-            <Link href="https://malus-empdesk.vercel.app/">
+            <Link href="https://malus-robotics-empdesk-3ivw.vercel.app/">
               <button
                 className="
                 px-10 py-3
@@ -192,57 +192,6 @@ export default function Navbar({ logoRef }: NavbarProps) {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Wordmark shimmer keyframes */}
-      <style jsx global>{`
-        .wordmark-shimmer {
-          background-size: 220% 100%;
-          animation: wordmark-shimmer-move 9s ease-in-out infinite;
-        }
-
-        .wordmark-shimmer--light {
-          background-image: linear-gradient(
-            100deg,
-            #1e293b 0%,
-            #1e293b 38%,
-            #64748b 48%,
-            #94a3b8 52%,
-            #1e293b 62%,
-            #1e293b 100%
-          );
-        }
-
-        .wordmark-shimmer--dark {
-          background-image: linear-gradient(
-            100deg,
-            #e2e8f0 0%,
-            #e2e8f0 38%,
-            #ffffff 48%,
-            #cbd5e1 52%,
-            #e2e8f0 62%,
-            #e2e8f0 100%
-          );
-        }
-
-        @keyframes wordmark-shimmer-move {
-          0% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-          100% {
-            background-position: 0% 50%;
-          }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-          .wordmark-shimmer {
-            animation: none;
-            background-position: 0% 50%;
-          }
-        }
-      `}</style>
     </>
   );
 }

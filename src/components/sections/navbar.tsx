@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Menu, X } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -68,17 +67,20 @@ export default function Navbar({ logoRef }: NavbarProps) {
       >
         <div className="max-w-7xl mx-auto px-6 py-4 md:py-5 flex items-center justify-between">
 
-          {/* LOGO */}
-          <Link href={`/${locale}`} className="flex items-center">
-            <div ref={logoRef}>
-              <Image
-                src="/logo1.png"
-                alt="Malus Robotics"
-                width={260}
-                height={100}
-                priority
-                className="h-14 md:h-16 w-auto object-contain"
-              />
+          {/* WORDMARK */}
+          <Link href={`/${locale}`} className="flex items-center group">
+            <div ref={logoRef} className="relative flex items-baseline gap-[0.35em]">
+              <span
+                className={`wordmark-shimmer font-semibold tracking-[0.02em] text-xl md:text-2xl bg-clip-text text-transparent transition-opacity duration-500 ${
+                  scrolled ? "wordmark-shimmer--dark" : "wordmark-shimmer--light"
+                }`}
+              >
+                MALÜS
+              </span>
+              <span className="font-light tracking-[0.34em] text-[0.65rem] md:text-xs uppercase text-cyan-600">
+                Robotics
+              </span>
+              <span className="absolute -bottom-2 left-0 h-px w-full bg-slate-400/60" />
             </div>
           </Link>
 
@@ -113,7 +115,7 @@ export default function Navbar({ logoRef }: NavbarProps) {
 
           {/* CTA BUTTON */}
           <div className="hidden md:block">
-            <Link href="https://malus-robotics-empdesk-3ivw.vercel.app/">
+            <Link href="https://malus-empdesk.vercel.app/">
               <button
                 className="
                 px-7 py-2.5
@@ -174,7 +176,7 @@ export default function Navbar({ logoRef }: NavbarProps) {
             {/* Mobile Language Switcher */}
             <LanguageSwitcher />
 
-            <Link href="https://malus-robotics-empdesk-3ivw.vercel.app/">
+            <Link href="https://malus-empdesk.vercel.app/">
               <button
                 className="
                 px-10 py-3
@@ -190,6 +192,57 @@ export default function Navbar({ logoRef }: NavbarProps) {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Wordmark shimmer keyframes */}
+      <style jsx global>{`
+        .wordmark-shimmer {
+          background-size: 220% 100%;
+          animation: wordmark-shimmer-move 9s ease-in-out infinite;
+        }
+
+        .wordmark-shimmer--light {
+          background-image: linear-gradient(
+            100deg,
+            #1e293b 0%,
+            #1e293b 38%,
+            #64748b 48%,
+            #94a3b8 52%,
+            #1e293b 62%,
+            #1e293b 100%
+          );
+        }
+
+        .wordmark-shimmer--dark {
+          background-image: linear-gradient(
+            100deg,
+            #e2e8f0 0%,
+            #e2e8f0 38%,
+            #ffffff 48%,
+            #cbd5e1 52%,
+            #e2e8f0 62%,
+            #e2e8f0 100%
+          );
+        }
+
+        @keyframes wordmark-shimmer-move {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .wordmark-shimmer {
+            animation: none;
+            background-position: 0% 50%;
+          }
+        }
+      `}</style>
     </>
   );
 }

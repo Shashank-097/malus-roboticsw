@@ -105,6 +105,7 @@ export default function ContactPage() {
                 { title: t("hq_title"), city: t("hq_city"), email: "support@malusrobotics.com" },
                 { title: t("bu_title"), city: t("bu_city"), email: "services@malusrobotics.com" },
                 { title: t("de_title"), city: t("de_city"), email: "info@malusrobotics.com" },
+                { title: t("usa_title"), city: t("usa_city"), email: "usa@malusrobotics.com" },
               ].map((loc) => (
                 <div key={loc.email} className="flex gap-4">
                   <MapPin className="text-cyan-600 mt-1 shrink-0" />

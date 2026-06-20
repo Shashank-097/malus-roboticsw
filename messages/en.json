@@ -82,7 +82,9 @@
     "bu_title": "India (Business Unit)",
     "bu_city": "Greater Noida, Uttar Pradesh",
     "de_title": "Germany (Partner)",
-    "de_city": "Kranzberg, Germany",
+    "de_city": "Bavaria, Germany",
+    "usa_title": "USA (Partner)",
+    "usa_city": "6300 Sashabaw Rd. Ste. B, Clarkston, MI 48346",
     "footer_note": "Engineering-Driven • Reliable • Scalable"
   },
   "services_page": {
@@ -205,7 +207,9 @@
     "bu_title": "India (Business Unit)",
     "bu_city": "Greater Noida, Uttar Pradesh",
     "de_title": "Germany (Partner)",
-    "de_city": "Kranzberg, Germany",
+    "de_city": "Bavaria, Germany",
+    "usa_title": "USA (Partner)",
+    "usa_city": "6300 Sashabaw Rd. Ste. B, Clarkston, MI 48346",
     "rights": "All rights reserved.",
     "designed_by": "Designed & Engineered by",
     "privacy": "Privacy Policy",
@@ -223,66 +227,6 @@
     "step3_title": "Deploy with Confidence",
     "step3_desc": "We integrate, test, and optimize in real environments to guarantee uptime and determinism."
   },
-  "robotics_page": {
-    "badge": "Industry 4.0 Ready",
-    "h1_line1": "Precision",
-    "h1_line2": "Robotics Engineering",
-    "desc": "We design intelligent automation systems that connect robotics, machine vision, and industrial software to modern manufacturing.",
-    "cta_consult": "Technical Consultation",
-    "stat1_val": "500+", "stat1_label": "Robots Deployed",
-    "stat2_val": "150ms", "stat2_label": "Cycle Time",
-    "stat3_val": "24/7", "stat3_label": "Remote Support",
-    "stat4_val": "12+", "stat4_label": "Industry Verticals",
-    "capabilities_title": "Technical Capabilities",
-    "capabilities_desc": "Full-stack automation expertise from PLC logic to AI machine vision.",
-    "cap1_title": "PLC Programming", "cap1_desc": "Industrial ladder logic, real-time IO control, and deterministic automation.",
-    "cap2_title": "Industrial Robotics", "cap2_desc": "Integration and commissioning of multi-axis robotic systems.",
-    "cap3_title": "Machine Vision", "cap3_desc": "AI-driven inspection and robotic guidance.",
-    "cap4_title": "Digital Twin Simulation", "cap4_desc": "Physics-based virtual commissioning environments.",
-    "cap5_title": "Special Purpose Machines", "cap5_desc": "Custom automation equipment for production lines.",
-    "cap6_title": "Industry 4.0 Integration", "cap6_desc": "MES, ERP and cloud connectivity for smart factories.",
-    "cta_title": "Ready to Automate?",
-    "cta_desc": "Speak with our robotics engineers to explore automation solutions tailored for your production environment.",
-    "cta_button": "Speak with an Engineer"
-  },
-  "it_page": {
-    "offer_banner": "SPECIAL OFFER: Get Employee Desk Software FREE for 1 Year.",
-    "offer_claim": "Claim Now",
-    "badge": "Engineering Division v4.0",
-    "h1_line1": "SOFTWARE",
-    "h1_line2": "DEVELOPMENT.",
-    "hero_desc": "Architecting resilient platforms and AI integrations. Scale your business infrastructure with our expert engineering lab.",
-    "cta_start": "Start a Project",
-    "secure_stack": "SECURE STACK",
-    "dashboard_title": "Live Engine Status",
-    "dashboard_stable": "Stable",
-    "metric1_label": "System Uptime", "metric1_val": "99.98%",
-    "metric2_label": "Deployment", "metric2_val": "24/7 CI/CD",
-    "metric3_label": "Security", "metric3_val": "A+ Verified",
-    "services_title": "Service",
-    "services_subtitle_highlight": "Infrastructure",
-    "services_desc": "Resilient software development for every business tier.",
-    "s1_tag": "Front-End", "s1_title": "Web Development", "s1_desc": "High-performance Next.js & React platforms optimized for speed and SEO.",
-    "s2_tag": "Infrastructure", "s2_title": "Backend Systems", "s2_desc": "Scalable Node.js & Python logic with secure database architecture.",
-    "s3_tag": "Visual Design", "s3_title": "UI/UX Design", "s3_desc": "Intuitive interfaces focusing on modern architectural principles.",
-    "s4_tag": "Innovation", "s4_title": "AI Integration", "s4_desc": "Deploying LLM models and intelligent data analysis pipelines.",
-    "demo_badge": "Exclusive Benefit",
-    "demo_title1": "Project Demo:",
-    "demo_title2": "Employee Desk",
-    "demo_title3": "FREE for 1 Year",
-    "demo_desc": "New partners get full enterprise access to our centralized workforce platform at zero cost for the first 12 months.",
-    "demo_tag1": "12 MONTHS FREE", "demo_tag2": "DEMO INSTANCE",
-    "demo_spotlight": "Project Spotlight",
-    "demo_project_name": "Workflow & Productivity Suite",
-    "demo_claim": "Claim Your Instance",
-    "stack_title": "Core Technology Stack",
-    "final_line1": "LET'S BUILD",
-    "final_line2": "the future.",
-    "final_desc": "Partner with us for your next software initiative and receive the Employee Desk ecosystem for free for a full year.",
-    "final_cta": "Get Started",
-    "footer_copy": "© 2026 Engineering Division — High-Performance Software Laboratory"
-  },
-  
   "lookbook": {
     "eyebrow": "Industrial Automation",
     "title_line1": "Engineering Intelligent",
@@ -314,10 +258,9 @@
     "s6_title": "Smart Factory",
     "s6_subtitle": "Industry 4.0 Integration"
   },
-  
 
 
-  
+
   "project_assembly": {
     "eyebrow": "Automotive · Assembly Automation",
     "h1_line1": "Automotive Assembly Line",

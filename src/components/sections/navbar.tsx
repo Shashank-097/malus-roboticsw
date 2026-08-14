@@ -176,7 +176,7 @@ export default function Navbar({ logoRef }: NavbarProps) {
             {/* Mobile Language Switcher */}
             <LanguageSwitcher />
 
-            <Link href="https://malus-robotics-empdesk-3ivw.vercel.app/">
+            <Link href="https://malus-empdesk.vercel.app/">
               <button
                 className="
                 px-10 py-3

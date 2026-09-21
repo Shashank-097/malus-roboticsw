@@ -48,7 +48,7 @@ export default function Hero() {
           className="absolute right-0 top-0 h-full w-[55%] object-cover hidden lg:block
                      will-change-transform transition-transform duration-700"
         >
-          <source src="/videos/hero-industrial1.mp4" type="video/mp4" />
+          <source src="/videos/herovideo1.mp4" type="video/mp4" />
         </video>
 
         {/* Dark cinematic overlay */}

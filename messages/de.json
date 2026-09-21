@@ -82,7 +82,9 @@
     "bu_title": "Indien (Geschäftseinheit)",
     "bu_city": "Greater Noida, Uttar Pradesh",
     "de_title": "Deutschland (Partner)",
-    "de_city": "Kranzberg, Deutschland",
+    "de_city": "Bayern, Deutschland",
+    "usa_title": "USA (Partner)",
+    "usa_city": "6300 Sashabaw Rd. Ste. B, Clarkston, MI 48346",
     "footer_note": "Technikgetrieben • Zuverlässig • Skalierbar"
   },
   "services_page": {
@@ -205,15 +207,16 @@
     "bu_title": "Indien (Geschäftseinheit)",
     "bu_city": "Greater Noida, Uttar Pradesh",
     "de_title": "Deutschland (Partner)",
-    "de_city": "Kranzberg, Deutschland",
+    "de_city": "Bayern, Deutschland",
+    "usa_title": "USA (Partner)",
+    "usa_city": "6300 Sashabaw Rd. Ste. B, Clarkston, MI 48346",
+    "locations_title": "Standorte",
     "rights": "Alle Rechte vorbehalten.",
     "designed_by": "Entworfen & entwickelt von",
     "privacy": "Datenschutzrichtlinie",
     "terms": "Nutzungsbedingungen",
     "contact_link": "Kontakt"
   },
-
-
   "process": {
     "eyebrow": "UNSER PROZESS",
     "step1_title": "System analysieren",
@@ -223,66 +226,6 @@
     "step3_title": "Mit Vertrauen einsetzen",
     "step3_desc": "Wir integrieren, testen und optimieren in realen Umgebungen, um Verfügbarkeit und Determinismus zu garantieren."
   },
-  "robotics_page": {
-    "badge": "Industry 4.0 bereit",
-    "h1_line1": "Präzisions",
-    "h1_line2": "Robotik-Engineering",
-    "desc": "Wir entwickeln intelligente Automatisierungssysteme, die Robotik, maschinelles Sehen und Industriesoftware verbinden.",
-    "cta_consult": "Technische Beratung",
-    "stat1_val": "500+", "stat1_label": "Eingesetzte Roboter",
-    "stat2_val": "150ms", "stat2_label": "Zykluszeit",
-    "stat3_val": "24/7", "stat3_label": "Fernunterstützung",
-    "stat4_val": "12+", "stat4_label": "Industriebranchen",
-    "capabilities_title": "Technische Fähigkeiten",
-    "capabilities_desc": "Vollständige Automatisierungsexpertise von der SPS-Logik bis zur KI-Bildverarbeitung.",
-    "cap1_title": "SPS-Programmierung", "cap1_desc": "Industrielle Leiterlogik, Echtzeit-IO-Steuerung und deterministische Automatisierung.",
-    "cap2_title": "Industrierobotik", "cap2_desc": "Integration und Inbetriebnahme von mehrachsigen Robotersystemen.",
-    "cap3_title": "Maschinelles Sehen", "cap3_desc": "KI-gestützte Inspektion und Roboterführung.",
-    "cap4_title": "Digitale Zwillingssimulation", "cap4_desc": "Physikbasierte virtuelle Inbetriebnahmeumgebungen.",
-    "cap5_title": "Sonderzweckmaschinen", "cap5_desc": "Benutzerdefinierte Automatisierungsgeräte für Produktionslinien.",
-    "cap6_title": "Industry 4.0 Integration", "cap6_desc": "MES, ERP und Cloud-Konnektivität für Smart Factories.",
-    "cta_title": "Bereit zur Automatisierung?",
-    "cta_desc": "Sprechen Sie mit unseren Robotikingenieuren, um Automatisierungslösungen für Ihre Produktion zu erkunden.",
-    "cta_button": "Mit einem Ingenieur sprechen"
-  },
-  "it_page": {
-    "offer_banner": "SONDERANGEBOT: Employee Desk Software 1 Jahr KOSTENLOS.",
-    "offer_claim": "Jetzt sichern",
-    "badge": "Ingenieurabteilung v4.0",
-    "h1_line1": "SOFTWARE",
-    "h1_line2": "ENTWICKLUNG.",
-    "hero_desc": "Wir entwickeln robuste Plattformen und KI-Integrationen. Skalieren Sie Ihre Infrastruktur mit unserem Experten-Labor.",
-    "cta_start": "Projekt starten",
-    "secure_stack": "SICHERER STACK",
-    "dashboard_title": "Live-Engine-Status",
-    "dashboard_stable": "Stabil",
-    "metric1_label": "Systemverfügbarkeit", "metric1_val": "99,98%",
-    "metric2_label": "Deployment", "metric2_val": "24/7 CI/CD",
-    "metric3_label": "Sicherheit", "metric3_val": "A+ Verifiziert",
-    "services_title": "Service",
-    "services_subtitle_highlight": "Infrastruktur",
-    "services_desc": "Robuste Softwareentwicklung für jede Unternehmensebene.",
-    "s1_tag": "Frontend", "s1_title": "Webentwicklung", "s1_desc": "Hochleistungs-Next.js & React-Plattformen, optimiert für Geschwindigkeit und SEO.",
-    "s2_tag": "Infrastruktur", "s2_title": "Backend-Systeme", "s2_desc": "Skalierbare Node.js & Python-Logik mit sicherer Datenbankarchitektur.",
-    "s3_tag": "Visuelles Design", "s3_title": "UI/UX Design", "s3_desc": "Intuitive Benutzeroberflächen mit modernen Gestaltungsprinzipien.",
-    "s4_tag": "Innovation", "s4_title": "KI-Integration", "s4_desc": "Einsatz von LLM-Modellen und intelligenten Datenanalysepipelines.",
-    "demo_badge": "Exklusiver Vorteil",
-    "demo_title1": "Projekt-Demo:",
-    "demo_title2": "Employee Desk",
-    "demo_title3": "1 Jahr KOSTENLOS",
-    "demo_desc": "Neue Partner erhalten vollen Unternehmenszugang zu unserer Plattform für die ersten 12 Monate kostenlos.",
-    "demo_tag1": "12 MONATE KOSTENLOS", "demo_tag2": "DEMO-INSTANZ",
-    "demo_spotlight": "Projekt-Spotlight",
-    "demo_project_name": "Workflow & Produktivitätssuite",
-    "demo_claim": "Instanz sichern",
-    "stack_title": "Kerntechnologie-Stack",
-    "final_line1": "LASS UNS",
-    "final_line2": "die Zukunft bauen.",
-    "final_desc": "Partnern Sie mit uns für Ihre nächste Software-Initiative und erhalten Sie das Employee Desk-Ökosystem ein Jahr lang kostenlos.",
-    "final_cta": "Loslegen",
-    "footer_copy": "© 2026 Ingenieurabteilung — Hochleistungs-Softwarelabor"
-  },
-
   "lookbook": {
     "eyebrow": "Industrielle Automatisierung",
     "title_line1": "Intelligente Fabriken",
@@ -314,7 +257,6 @@
     "s6_title": "Smart Factory",
     "s6_subtitle": "Industry 4.0 Integration"
   },
-
   "project_assembly": {
     "eyebrow": "Automotive · Montageautomatisierung",
     "h1_line1": "Automotive-Montagelinie",
@@ -365,5 +307,115 @@
     "res3": "Verbesserte Roboterzykluszeiten und Durchsatz",
     "res4": "Stabiles und zuverlässiges Systemverhalten beim Start",
     "res5": "Schnellerer Produktionsanlauf und reduzierte Ausfallzeiten"
+  },
+
+  "privacy_page": {
+    "h1": "Datenschutzrichtlinie",
+    "subtitle": "Wie wir Informationen über unsere Roboter, Apps und unsere Website hinweg erfassen, nutzen und schützen. Gültig ab {date}.",
+    "cross_link_text": "Suchen Sie unsere Nutzungsbedingungen?",
+    "cross_link_cta": "Hier ansehen",
+    "contact_heading": "Fragen zu dieser Richtlinie?",
+    "contact_body": "Schreiben Sie uns an {email} und wir melden uns bei Ihnen.",
+    "contact_email": "privacy@malusrobotics.com",
+
+    "sec_overview_title": "Überblick",
+    "sec_overview_body1": "Malüs Robotics entwickelt und baut Robotersysteme sowie die Software und Cloud-Dienste, die diese betreiben. Diese Richtlinie erklärt, welche Informationen wir erfassen, wenn Sie unsere Hardware kaufen, unsere Apps nutzen oder unsere Website besuchen, und wie wir damit umgehen.",
+    "sec_overview_body2": "Sie können unsere öffentliche Website besuchen, ohne uns mitzuteilen, wer Sie sind. Wir benötigen Informationen von Ihnen nur an bestimmten Punkten – bei der Erstellung eines Kontos, der Registrierung eines Geräts oder der Kontaktaufnahme mit dem Support.",
+
+    "sec_collect_title": "Welche Informationen wir erfassen",
+    "sec_collect_body1": "Wir erfassen je nach Art der Interaktion mit uns unterschiedliche Kategorien von Informationen:",
+    "sec_collect_list1": "Kontodaten – Name, E-Mail-Adresse, Lieferadresse und Telefonnummer bei Registrierung, Bestellung oder Kontaktaufnahme mit dem Support.",
+    "sec_collect_list2": "Geräte- und Betriebsdaten – Telemetrie, Sensorprotokolle, Firmware-Version, Fehlerberichte und Diagnosedaten, die von Ihrem Roboter gesendet werden, damit er einwandfrei läuft und wir ihn warten können.",
+    "sec_collect_list3": "Nutzungsdaten – wie Sie mit unseren Apps und Dashboards interagieren, einschließlich Funktionsnutzung und Sitzungsaktivität.",
+    "sec_collect_list4": "Website-Analysen – anonymisierte Verkehrs- und Nutzungsdaten, die über Cookies erfasst werden, siehe unten.",
+
+    "sec_use_title": "Wie wir Informationen nutzen",
+    "sec_use_body1": "Wir nutzen erfasste Informationen, um unsere Produkte zu betreiben, abzusichern und zu verbessern: um Ihr Konto zu authentifizieren, Firmware- und Software-Updates bereitzustellen, Support zu leisten, den Zustand und die Sicherheit der Geräte zu überwachen und zu verstehen, wie unsere Produkte genutzt werden, damit wir sie verbessern können.",
+    "sec_use_body2": "Wir nutzen Sensor- oder Telemetriedaten nicht, um Werbeprofile zu erstellen.",
+
+    "sec_sharing_title": "Weitergabe und Offenlegung",
+    "sec_sharing_body1": "Malüs Robotics verkauft Ihre personenbezogenen Daten nicht. Wir geben sie nur an nicht verbundene Unternehmen weiter:",
+    "sec_sharing_list1": "Um ein von Ihnen angefordertes Produkt oder eine Dienstleistung zu erbringen, oder mit Ihrer Erlaubnis.",
+    "sec_sharing_list2": "An vertrauenswürdige Dienstleister, die im Rahmen von Vertraulichkeitsvereinbarungen für uns arbeiten – zum Beispiel Cloud-Hosting- oder Versandpartner. Diese dürfen Ihre Daten nicht über unsere Anweisungen hinaus nutzen.",
+    "sec_sharing_list3": "Als Reaktion auf eine Vorladung, gerichtliche Anordnung oder ein anderes rechtliches Verfahren.",
+    "sec_sharing_list4": "Wenn wir es für notwendig halten, um Betrug, illegale Aktivitäten oder eine Bedrohung der körperlichen Sicherheit einer Person zu untersuchen oder zu verhindern.",
+    "sec_sharing_list5": "Falls Malüs Robotics von einem anderen Unternehmen übernommen wird oder mit diesem fusioniert.",
+
+    "sec_security_title": "Datensicherheit",
+    "sec_security_body1": "Wir setzen physische, technische und administrative Schutzmaßnahmen ein, die der Sensibilität der jeweiligen Daten angemessen sind, einschließlich Verschlüsselung von Daten während der Übertragung, Zugriffskontrollen für Geräte- und Kontodaten und regelmäßiger Überprüfung unserer Sicherheitspraktiken. Kein System ist vollständig sicher, und wir können keinen absoluten Schutz garantieren.",
+
+    "sec_retention_title": "Datenspeicherung",
+    "sec_retention_body1": "Wir speichern personenbezogene und geräterelevante Daten so lange, wie Ihr Konto aktiv ist oder wie es zur Erbringung des Dienstes, zur Einhaltung gesetzlicher Verpflichtungen, zur Beilegung von Streitigkeiten und zur Durchsetzung unserer Vereinbarungen erforderlich ist. Diagnose- und Telemetrieprotokolle werden fortlaufend gespeichert und regelmäßig gelöscht.",
+
+    "sec_cookies_title": "Cookies und ähnliche Technologien",
+    "sec_cookies_body1": "Unsere Website und Apps verwenden Cookies und ähnliche Technologien, um Sie angemeldet zu halten, Einstellungen zu speichern und den aggregierten Datenverkehr und die Nutzung zu messen. Diese Informationen werden nur auf aggregierter Ebene analysiert – wir überprüfen sie nicht personenbezogen.",
+    "sec_cookies_body2": "Sie können Cookies in Ihren Browsereinstellungen deaktivieren oder nicht notwendige Analysen in Ihren Kontoeinstellungen abschalten. Einige Funktionen funktionieren möglicherweise nicht korrekt, wenn Cookies deaktiviert sind.",
+
+    "sec_thirdparty_title": "Links und Dienste Dritter",
+    "sec_thirdparty_body1": "Unsere Website und Apps können auf Dienste verlinken oder diese integrieren, die wir nicht kontrollieren – etwa Zahlungsdienstleister, Kartenanbieter oder soziale Plattformen. Deren Datenschutzpraktiken liegen in deren eigener Verantwortung; wir empfehlen, diese vor der Weitergabe von Informationen zu prüfen.",
+
+    "sec_children_title": "Datenschutz für Kinder",
+    "sec_children_body1": "Unsere Produkte und unsere Website richten sich nicht an Kinder. Wir erfassen wissentlich keine personenbezogenen Daten von Personen unter 13 Jahren ohne elterliche oder erzieherische Aufsicht.",
+
+    "sec_rights_title": "Ihre Rechte und Wahlmöglichkeiten",
+    "sec_rights_body1": "Je nachdem, wo Sie leben, haben Sie möglicherweise das Recht, auf Ihre personenbezogenen Daten zuzugreifen, sie zu korrigieren, zu exportieren oder zu löschen, sowie eine zuvor erteilte Einwilligung zu widerrufen. Um eines dieser Rechte auszuüben, kontaktieren Sie uns über die unten angegebenen Daten – wir bemühen uns aufrichtig, zeitnah zu antworten.",
+
+    "sec_transfers_title": "Internationale Übermittlungen",
+    "sec_transfers_body1": "Da wir regionsübergreifend tätig sind, können Ihre Informationen in einem anderen Land als Ihrem eigenen verarbeitet werden. Bei internationalen Datenübermittlungen stellen wir sicher, dass ein vergleichbares Schutzniveau eingehalten wird.",
+
+    "sec_grievance_title": "Beschwerdemanagement",
+    "sec_grievance_body1": "Wenn Sie sich über den Umgang mit Ihren Informationen beschweren möchten, schreiben Sie uns an die untenstehende E-Mail-Adresse – wir bearbeiten dies so schnell wie vernünftigerweise möglich.",
+
+    "sec_changes_title": "Änderungen dieser Richtlinie",
+    "sec_changes_body1": "Wir können diese Richtlinie von Zeit zu Zeit aktualisieren. Wir werden Ihre Rechte im Rahmen dieser Richtlinie nicht ohne Ihre ausdrückliche Zustimmung einschränken und veröffentlichen alle Änderungen auf dieser Seite zusammen mit einem neuen Gültigkeitsdatum."
+  },
+  "terms_page": {
+    "h1": "Nutzungsbedingungen",
+    "subtitle": "Die Bedingungen, die die Nutzung unserer Roboter, Software und Cloud-Plattform regeln. Gültig ab {date}.",
+    "cross_link_text": "Suchen Sie unsere Datenschutzrichtlinie?",
+    "cross_link_cta": "Hier ansehen",
+    "contact_heading": "Fragen zu diesen Bedingungen?",
+    "contact_body": "Schreiben Sie uns an {email} und wir melden uns bei Ihnen.",
+    "contact_email": "legal@malusrobotics.com",
+
+    "sec_acceptance_title": "Annahme der Bedingungen",
+    "sec_acceptance_body1": "Durch den Kauf, die Registrierung oder die Nutzung von Hardware, Software oder Online-Diensten von Malüs Robotics (zusammen die „Dienste“) stimmen Sie diesen Nutzungsbedingungen zu. Wenn Sie nicht einverstanden sind, nutzen Sie die Dienste bitte nicht.",
+
+    "sec_services_title": "Beschreibung der Dienste",
+    "sec_services_body1": "Malüs Robotics stellt Roboterhardware zusammen mit begleitender Software, Firmware und einer Cloud-Plattform bereit, die zur Konfiguration, Überwachung und zum Betrieb dieser Hardware verwendet wird. Funktionen und Spezifikationen können sich im Zuge der Weiterentwicklung der Dienste ändern.",
+
+    "sec_account_title": "Kontoregistrierung",
+    "sec_account_body1": "Um ein Gerät zu registrieren oder auf bestimmte Funktionen zuzugreifen, benötigen Sie ein Konto. Sie sind dafür verantwortlich, Ihre Zugangsdaten sicher zu verwahren, und haften für alle Aktivitäten, die unter Ihrem Konto stattfinden. Informieren Sie uns umgehend, wenn Sie eine unbefugte Nutzung vermuten.",
+
+    "sec_license_title": "Lizenz und zulässige Nutzung",
+    "sec_license_body1": "Wir gewähren Ihnen eine beschränkte, nicht-exklusive und nicht übertragbare Lizenz zur Nutzung unserer Software und Firmware ausschließlich zum Betrieb der von Ihnen erworbenen Hardware. Sie verpflichten sich, die Firmware nicht zurückzuentwickeln, zu dekompilieren oder so zu manipulieren, dass die Sicherheit beeinträchtigt wird, und die Dienste nicht für rechtswidrige Zwecke zu nutzen.",
+
+    "sec_hardware_title": "Hardware, Sicherheit und Garantie",
+    "sec_hardware_body1": "Unsere Roboter sind mechanische und elektronische Systeme, die inhärente Risiken bergen. Befolgen Sie die dem Gerät beiliegenden Sicherheitshinweise – halten Sie sich während des Betriebs von beweglichen Teilen fern und umgehen Sie keine Sicherheitsverriegelungen.",
+    "sec_hardware_body2": "Die Hardware unterliegt der im Kaufpreis enthaltenen eingeschränkten Garantie. Unbefugte Änderungen, Missbrauch oder eine Nutzung außerhalb der dokumentierten Betriebsbedingungen führen zum Erlöschen dieser Garantie.",
+
+    "sec_updates_title": "Software- und Firmware-Updates",
+    "sec_updates_body1": "Wir können Updates veröffentlichen, die Funktionen hinzufügen, die Leistung verbessern oder Sicherheitslücken schließen. Manche Updates sind erforderlich, damit die Dienste sicher und korrekt funktionieren, und können automatisch angewendet werden.",
+
+    "sec_ip_title": "Geistiges Eigentum",
+    "sec_ip_body1": "Alle Designs, Software, Marken und Dokumentationen im Zusammenhang mit den Diensten sind Eigentum von Malüs Robotics oder unseren Lizenzgebern. Diese Bedingungen übertragen kein Eigentum an diesem geistigen Eigentum auf Sie.",
+
+    "sec_content_title": "Nutzerinhalte und -daten",
+    "sec_content_body1": "Sofern die Dienste es Ihnen erlauben, Inhalte hochzuladen – etwa Konfigurationen, aufgezeichnete Sensordaten oder Support-Tickets – behalten Sie das Eigentum daran. Sie gewähren uns eine Lizenz, diese ausschließlich zum Betrieb, zur Unterstützung und zur Verbesserung der Dienste zu nutzen.",
+
+    "sec_liability_title": "Haftungsausschlüsse und Haftungsbeschränkung",
+    "sec_liability_body1": "Die Dienste werden „wie besehen“ bereitgestellt. Im gesetzlich zulässigen Umfang schließen wir stillschweigende Garantien der Marktgängigkeit und Eignung für einen bestimmten Zweck aus, und unsere Haftung für Ansprüche im Zusammenhang mit den Diensten ist auf den Betrag beschränkt, den Sie uns in den zwölf Monaten vor Entstehung des Anspruchs gezahlt haben.",
+
+    "sec_indemnification_title": "Freistellung",
+    "sec_indemnification_body1": "Sie verpflichten sich, uns von Ansprüchen freizustellen, die aus Ihrem Missbrauch der Dienste oder einem Verstoß gegen diese Bedingungen entstehen.",
+
+    "sec_termination_title": "Kündigung",
+    "sec_termination_body1": "Wir können Ihren Zugang zu den Diensten aussetzen oder beenden, wenn Sie gegen diese Bedingungen verstoßen oder die Hardware auf eine Weise missbrauchen, die ein Sicherheitsrisiko darstellt. Sie können die Nutzung der Dienste jederzeit beenden.",
+
+    "sec_governinglaw_title": "Anwendbares Recht und Streitbeilegung",
+    "sec_governinglaw_body1": "Diese Bedingungen unterliegen dem Recht der Rechtsordnung, in der Malüs Robotics eingetragen ist, ohne Berücksichtigung von Kollisionsnormen. Streitigkeiten werden vor den Gerichten dieser Rechtsordnung beigelegt, sofern nicht örtliches Recht etwas anderes vorschreibt.",
+
+    "sec_changes_title": "Änderungen dieser Bedingungen",
+    "sec_changes_body1": "Wir können diese Bedingungen im Zuge der Weiterentwicklung unserer Dienste aktualisieren. Die weitere Nutzung der Dienste nach einer Aktualisierung bedeutet, dass Sie die überarbeiteten Bedingungen akzeptieren. Wesentliche Änderungen werden auf dieser Seite hervorgehoben."
   }
 }

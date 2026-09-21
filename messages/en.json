@@ -82,7 +82,9 @@
     "bu_title": "India (Business Unit)",
     "bu_city": "Greater Noida, Uttar Pradesh",
     "de_title": "Germany (Partner)",
-    "de_city": "Kranzberg, Germany",
+    "de_city": "Bavaria, Germany",
+    "usa_title": "USA (Partner)",
+    "usa_city": "6300 Sashabaw Rd. Ste. B, Clarkston, MI 48346",
     "footer_note": "Engineering-Driven • Reliable • Scalable"
   },
   "services_page": {
@@ -205,15 +207,16 @@
     "bu_title": "India (Business Unit)",
     "bu_city": "Greater Noida, Uttar Pradesh",
     "de_title": "Germany (Partner)",
-    "de_city": "Kranzberg, Germany",
+    "de_city": "Bavaria, Germany",
+    "usa_title": "USA (Partner)",
+    "usa_city": "6300 Sashabaw Rd. Ste. B, Clarkston, MI 48346",
+    "locations_title": "Locations",
     "rights": "All rights reserved.",
     "designed_by": "Designed & Engineered by",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "contact_link": "Contact"
   },
-
-
   "process": {
     "eyebrow": "OUR PROCESS",
     "step1_title": "Analyze the System",
@@ -223,66 +226,6 @@
     "step3_title": "Deploy with Confidence",
     "step3_desc": "We integrate, test, and optimize in real environments to guarantee uptime and determinism."
   },
-  "robotics_page": {
-    "badge": "Industry 4.0 Ready",
-    "h1_line1": "Precision",
-    "h1_line2": "Robotics Engineering",
-    "desc": "We design intelligent automation systems that connect robotics, machine vision, and industrial software to modern manufacturing.",
-    "cta_consult": "Technical Consultation",
-    "stat1_val": "500+", "stat1_label": "Robots Deployed",
-    "stat2_val": "150ms", "stat2_label": "Cycle Time",
-    "stat3_val": "24/7", "stat3_label": "Remote Support",
-    "stat4_val": "12+", "stat4_label": "Industry Verticals",
-    "capabilities_title": "Technical Capabilities",
-    "capabilities_desc": "Full-stack automation expertise from PLC logic to AI machine vision.",
-    "cap1_title": "PLC Programming", "cap1_desc": "Industrial ladder logic, real-time IO control, and deterministic automation.",
-    "cap2_title": "Industrial Robotics", "cap2_desc": "Integration and commissioning of multi-axis robotic systems.",
-    "cap3_title": "Machine Vision", "cap3_desc": "AI-driven inspection and robotic guidance.",
-    "cap4_title": "Digital Twin Simulation", "cap4_desc": "Physics-based virtual commissioning environments.",
-    "cap5_title": "Special Purpose Machines", "cap5_desc": "Custom automation equipment for production lines.",
-    "cap6_title": "Industry 4.0 Integration", "cap6_desc": "MES, ERP and cloud connectivity for smart factories.",
-    "cta_title": "Ready to Automate?",
-    "cta_desc": "Speak with our robotics engineers to explore automation solutions tailored for your production environment.",
-    "cta_button": "Speak with an Engineer"
-  },
-  "it_page": {
-    "offer_banner": "SPECIAL OFFER: Get Employee Desk Software FREE for 1 Year.",
-    "offer_claim": "Claim Now",
-    "badge": "Engineering Division v4.0",
-    "h1_line1": "SOFTWARE",
-    "h1_line2": "DEVELOPMENT.",
-    "hero_desc": "Architecting resilient platforms and AI integrations. Scale your business infrastructure with our expert engineering lab.",
-    "cta_start": "Start a Project",
-    "secure_stack": "SECURE STACK",
-    "dashboard_title": "Live Engine Status",
-    "dashboard_stable": "Stable",
-    "metric1_label": "System Uptime", "metric1_val": "99.98%",
-    "metric2_label": "Deployment", "metric2_val": "24/7 CI/CD",
-    "metric3_label": "Security", "metric3_val": "A+ Verified",
-    "services_title": "Service",
-    "services_subtitle_highlight": "Infrastructure",
-    "services_desc": "Resilient software development for every business tier.",
-    "s1_tag": "Front-End", "s1_title": "Web Development", "s1_desc": "High-performance Next.js & React platforms optimized for speed and SEO.",
-    "s2_tag": "Infrastructure", "s2_title": "Backend Systems", "s2_desc": "Scalable Node.js & Python logic with secure database architecture.",
-    "s3_tag": "Visual Design", "s3_title": "UI/UX Design", "s3_desc": "Intuitive interfaces focusing on modern architectural principles.",
-    "s4_tag": "Innovation", "s4_title": "AI Integration", "s4_desc": "Deploying LLM models and intelligent data analysis pipelines.",
-    "demo_badge": "Exclusive Benefit",
-    "demo_title1": "Project Demo:",
-    "demo_title2": "Employee Desk",
-    "demo_title3": "FREE for 1 Year",
-    "demo_desc": "New partners get full enterprise access to our centralized workforce platform at zero cost for the first 12 months.",
-    "demo_tag1": "12 MONTHS FREE", "demo_tag2": "DEMO INSTANCE",
-    "demo_spotlight": "Project Spotlight",
-    "demo_project_name": "Workflow & Productivity Suite",
-    "demo_claim": "Claim Your Instance",
-    "stack_title": "Core Technology Stack",
-    "final_line1": "LET'S BUILD",
-    "final_line2": "the future.",
-    "final_desc": "Partner with us for your next software initiative and receive the Employee Desk ecosystem for free for a full year.",
-    "final_cta": "Get Started",
-    "footer_copy": "© 2026 Engineering Division — High-Performance Software Laboratory"
-  },
-  
   "lookbook": {
     "eyebrow": "Industrial Automation",
     "title_line1": "Engineering Intelligent",
@@ -314,10 +257,6 @@
     "s6_title": "Smart Factory",
     "s6_subtitle": "Industry 4.0 Integration"
   },
-  
-
-
-  
   "project_assembly": {
     "eyebrow": "Automotive · Assembly Automation",
     "h1_line1": "Automotive Assembly Line",
@@ -368,5 +307,116 @@
     "res3": "Improved robot cycle times and throughput",
     "res4": "Stable and reliable system behavior at start-up",
     "res5": "Faster production ramp-up and reduced downtime"
+  },
+
+
+  "privacy_page": {
+    "h1": "Privacy policy",
+    "subtitle": "How we collect, use, and protect information across our robots, apps, and website. Effective {date}.",
+    "cross_link_text": "Looking for our Terms & Conditions?",
+    "cross_link_cta": "View here",
+    "contact_heading": "Questions about this policy?",
+    "contact_body": "Write to us at {email} and we'll get back to you.",
+    "contact_email": "privacy@malusrobotics.com",
+
+    "sec_overview_title": "Overview",
+    "sec_overview_body1": "Malüs Robotics designs and builds robotic systems, and the software and cloud services that run them. This policy explains what information we collect when you buy our hardware, use our apps, or visit our website, and how we handle it.",
+    "sec_overview_body2": "You can browse our public site without telling us who you are. We only need information from you at specific points — creating an account, registering a device, or contacting support.",
+
+    "sec_collect_title": "Information we collect",
+    "sec_collect_body1": "We collect a few different categories of information, depending on how you interact with us:",
+    "sec_collect_list1": "Account details — name, email, shipping address, and phone number when you register, order, or contact support.",
+    "sec_collect_list2": "Device and operational data — telemetry, sensor logs, firmware version, error reports, and diagnostic data sent from your robot to help it run and to help us maintain it.",
+    "sec_collect_list3": "Usage data — how you interact with our apps and dashboards, including feature usage and session activity.",
+    "sec_collect_list4": "Site analytics — anonymized traffic and browsing data collected through cookies, described further below.",
+
+    "sec_use_title": "How we use it",
+    "sec_use_body1": "We use collected information to operate, secure, and improve our products: to authenticate your account, deliver firmware and software updates, provide support, monitor device health and safety, and understand how our products are used so we can improve them.",
+    "sec_use_body2": "We do not use sensor or telemetry data to build advertising profiles.",
+
+    "sec_sharing_title": "Sharing and disclosure",
+    "sec_sharing_body1": "Malüs Robotics does not sell your personal information. We share it with non-affiliated companies only:",
+    "sec_sharing_list1": "To provide a product or service you've requested, or with your permission.",
+    "sec_sharing_list2": "With trusted vendors who work on our behalf under confidentiality agreements — for example, cloud hosting or shipping partners. They may not use your data beyond what we've instructed.",
+    "sec_sharing_list3": "In response to a subpoena, court order, or other legal process.",
+    "sec_sharing_list4": "When we believe it's necessary to investigate or prevent fraud, illegal activity, or a threat to anyone's physical safety.",
+    "sec_sharing_list5": "If Malüs Robotics is acquired by, or merges with, another company.",
+
+    "sec_security_title": "Data security",
+    "sec_security_body1": "We apply physical, technical, and administrative safeguards appropriate to the sensitivity of the data involved, including encryption of data in transit, access controls on device and account data, and regular review of our security practices. No system is perfectly secure, and we can't guarantee absolute protection.",
+
+    "sec_retention_title": "Data retention",
+    "sec_retention_body1": "We keep personal and device data for as long as your account is active or as needed to provide the service, comply with legal obligations, resolve disputes, and enforce our agreements. Diagnostic and telemetry logs are retained on a rolling basis and periodically purged.",
+
+    "sec_cookies_title": "Cookies and similar technologies",
+    "sec_cookies_body1": "Our website and apps use cookies and similar technologies to keep you signed in, remember preferences, and measure aggregate traffic and usage. This information is analyzed at an aggregate level — we don't review it person by person.",
+    "sec_cookies_body2": "You can disable cookies in your browser settings, or opt out of non-essential analytics from your account settings. Some features may not work correctly with cookies disabled.",
+
+    "sec_thirdparty_title": "Third-party links and services",
+    "sec_thirdparty_body1": "Our site and apps may link to, or integrate with, services we don't control — payment processors, mapping providers, or social platforms. Their privacy practices are their own; we encourage you to review them before sharing information.",
+
+    "sec_children_title": "Children's privacy",
+    "sec_children_body1": "Our products and website are not directed at children. We don't knowingly collect personal information from anyone under 13 without parental or guardian supervision.",
+
+    "sec_rights_title": "Your rights and choices",
+    "sec_rights_body1": "Depending on where you live, you may have the right to access, correct, export, or delete your personal information, and to withdraw consent you previously gave us. To exercise any of these rights, contact us using the details below — we'll make a sincere effort to respond in a timely manner.",
+
+    "sec_transfers_title": "International transfers",
+    "sec_transfers_body1": "Because we operate across regions, your information may be processed in a country other than your own. Where we transfer data internationally, we take steps to ensure it receives a comparable level of protection.",
+
+    "sec_grievance_title": "Grievance redressal",
+    "sec_grievance_body1": "If you have a complaint about how your information has been handled, write to us at the email below and we'll address it as quickly as we reasonably can.",
+
+    "sec_changes_title": "Changes to this policy",
+    "sec_changes_body1": "We may update this policy from time to time. We won't reduce your rights under this policy without your explicit consent, and we'll post any changes on this page along with a new effective date."
+  },
+  "terms_page": {
+    "h1": "Terms & conditions",
+    "subtitle": "The terms that govern using our robots, software, and cloud platform. Effective {date}.",
+    "cross_link_text": "Looking for our Privacy Policy?",
+    "cross_link_cta": "View here",
+    "contact_heading": "Questions about these terms?",
+    "contact_body": "Write to us at {email} and we'll get back to you.",
+    "contact_email": "legal@malusrobotics.com",
+
+    "sec_acceptance_title": "Acceptance of terms",
+    "sec_acceptance_body1": "By purchasing, registering, or using any Malüs Robotics hardware, software, or online service (together, the \"Services\"), you agree to these Terms and Conditions. If you don't agree, please don't use the Services.",
+
+    "sec_services_title": "Description of services",
+    "sec_services_body1": "Malüs Robotics provides robotic hardware along with companion software, firmware, and a cloud platform used to configure, monitor, and operate that hardware. Features and specifications may change as we improve the Services.",
+
+    "sec_account_title": "Account registration",
+    "sec_account_body1": "You'll need an account to register a device or access certain features. You're responsible for keeping your login credentials secure and for all activity that happens under your account. Tell us right away if you suspect unauthorized use.",
+
+    "sec_license_title": "License and acceptable use",
+    "sec_license_body1": "We grant you a limited, non-exclusive, non-transferable license to use our software and firmware solely to operate the hardware you've purchased. You agree not to reverse engineer, decompile, or tamper with the firmware in a way that compromises safety, or use the Services for any unlawful purpose.",
+
+    "sec_hardware_title": "Hardware, safety, and warranty",
+    "sec_hardware_body1": "Our robots are mechanical and electronic systems that carry inherent risks. Follow the safety instructions included with your device — keep clear of moving parts during operation and don't bypass safety interlocks.",
+    "sec_hardware_body2": "Hardware is covered by the limited warranty included with your purchase. Unauthorized modification, misuse, or use outside of documented operating conditions voids that warranty.",
+
+    "sec_updates_title": "Software and firmware updates",
+    "sec_updates_body1": "We may release updates that add features, improve performance, or patch security issues. Some updates are required to keep the Services operating safely and correctly, and may be applied automatically.",
+
+    "sec_ip_title": "Intellectual property",
+    "sec_ip_body1": "All designs, software, trademarks, and documentation associated with the Services are owned by Malüs Robotics or our licensors. Nothing in these Terms transfers ownership of that intellectual property to you.",
+
+    "sec_content_title": "User content and data",
+    "sec_content_body1": "Where the Services let you upload content — configurations, recorded sensor data, or support tickets — you retain ownership of it. You grant us a license to use it solely to operate, support, and improve the Services.",
+
+    "sec_liability_title": "Disclaimers and limitation of liability",
+    "sec_liability_body1": "The Services are provided \"as is.\" To the fullest extent permitted by law, we disclaim implied warranties of merchantability and fitness for a particular purpose, and our liability for any claim relating to the Services is limited to the amount you paid us in the twelve months before the claim arose.",
+
+    "sec_indemnification_title": "Indemnification",
+    "sec_indemnification_body1": "You agree to indemnify and hold us harmless from claims arising out of your misuse of the Services or violation of these Terms.",
+
+    "sec_termination_title": "Termination",
+    "sec_termination_body1": "We may suspend or terminate your access to the Services if you violate these Terms or misuse the hardware in a way that creates a safety risk. You may stop using the Services at any time.",
+
+    "sec_governinglaw_title": "Governing law and disputes",
+    "sec_governinglaw_body1": "These Terms are governed by the laws of the jurisdiction in which Malüs Robotics is incorporated, without regard to conflict-of-law principles. Any disputes will be resolved in the courts of that jurisdiction, unless local law requires otherwise.",
+
+    "sec_changes_title": "Changes to these terms",
+    "sec_changes_body1": "We may update these Terms as our Services evolve. Continued use of the Services after an update means you accept the revised Terms. Material changes will be highlighted on this page."
   }
 }
